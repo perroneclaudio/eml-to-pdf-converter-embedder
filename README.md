@@ -50,6 +50,10 @@ Conversion using a custom font:
   | `--font-size`      | Text size (default: 10)                                      |
   | `--margins`        | Margins in mm (default: 20)                                  |
 
+## Roadmap
+
+Next goal: Full PDF/A-3b Compliance
+
 ## AI Disclosure
 
 This project was developed with the support of AI tools (Gemini 3-Pro). The final code was reviewed and tested by the author (not NASA-level testing, though).
