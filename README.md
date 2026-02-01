@@ -31,16 +31,19 @@ Single conversion (PDF generated in the same folder):
 Single conversion (custom output path):
    ```bash
    python eml_to_pdf.py messaggio.eml -o /folder/out.pdf
-
    # Windows (Use backslashes and quotes for paths with spaces)
    ```
 Batch conversion with a custom output folder:
    ```bash
    python eml_to_pdf.py ./cartella_eml --batch -o /folder_out
+   # Windows (Use backslashes and quotes for paths with spaces)
+
    ```
 Conversion using a custom font:
    ```bash
    python eml_to_pdf.py messaggio.eml --font ./DejaVuSans.ttf
+   # Windows (Use backslashes and quotes for paths with spaces)
+
    ```
 ## Available Options:
 
