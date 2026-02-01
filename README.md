@@ -15,6 +15,7 @@ A Python tool to convert `.eml` files into readable PDF documents, designed to p
 
    ```bash
    git clone https://github.com/perroneclaudio/eml-to-pdf-converter-embedder.git
+   
    cd eml-to-pdf-converter-embedder
    ```
 2. Install dependencies (Python 3.10+ required)
