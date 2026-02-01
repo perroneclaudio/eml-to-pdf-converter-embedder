@@ -57,7 +57,7 @@ Conversion using a custom font:
 
 ## Roadmap
 
-Next goal: Full PDF/A-3b Compliance
+Next goal: Full PDF/A-3b compliance
 
 ## AI Disclosure
 
