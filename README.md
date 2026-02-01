@@ -54,5 +54,6 @@ Conversion using a custom font:
 
 This project was developed with the support of AI tools (Gemini 3-Pro). The final code was reviewed and tested by the author (not NASA-level testing, though).
 
-<img width="579" height="458" alt="image" src="https://github.com/user-attachments/assets/c6ef7a35-4688-4d9f-baca-fa9995c9299e" />
+## Example in Foxit Reader
 
+<img src="https://github.com/user-attachments/assets/c6ef7a35-4688-4d9f-baca-fa9995c9299e" alt="Example Image" style="max-width: 100%; height: auto;">
