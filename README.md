@@ -42,7 +42,7 @@ Batch conversion with a custom output folder:
 Conversion using a custom font:
    ```bash
    python eml_to_pdf.py messaggio.eml --font ./DejaVuSans.ttf
-   # Windows Use backslashes and quotes for paths with spaces
+   # Windows: Use backslashes and quotes for paths with spaces
 
    ```
 ## Available Options:
