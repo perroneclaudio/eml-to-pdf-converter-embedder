@@ -1,4 +1,4 @@
-# eml-to-pdf-converter-embedder 📧➔📄
+# eml-to-pdf-converter-embedder 📧➔(📄📎📎)
 
 A Python tool to convert `.eml` files into readable PDF documents, designed to preserve the integrity of the original email by embedding all attachments and the source `.eml` file directly inside the PDF.
 
