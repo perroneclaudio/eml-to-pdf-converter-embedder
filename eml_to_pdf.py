@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+eml-to-pdf-converter-embedder
+Copyright (c) 2026 Claudio Perrone
+Licensed under the MIT License.
+See LICENSE file in the project root for full license information.
+"""
+
 import argparse
 import os
 import re
