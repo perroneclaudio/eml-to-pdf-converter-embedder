@@ -1,57 +1,56 @@
-
-
 # eml-to-pdf-converter-embedder 📧➔📄
 
-Uno strumento Python per convertire file `.eml` in documenti PDF leggibili, progettato per preservare l'integrità dell'email originale incorporando tutti gli allegati e il file .eml sorgente direttamente all'interno del PDF.
+A Python tool to convert `.eml` files into readable PDF documents, designed to preserve the integrity of the original email by embedding all attachments and the source `.eml` file directly inside the PDF.
 
-##  Caratteristiche principali
+## Key Features
 
-- **Attachment Embedding**: Gli allegati (PDF, immagini, documenti) non vengono solo citati, ma inseriti fisicamente nel PDF. Sono consultabili dal pannello "Allegati" di qualsiasi lettore PDF (Adobe Acrobat, Foxit ecc.).
-- **Archiviazione Sicura**: Il file `.eml` originale viene sempre incluso come allegato all'interno del PDF.
-- **Batch Processing**: Converte centinaia di email in un colpo solo semplicemente indicando una cartella di origine.
-- **Output Personalizzato**: Supporto per font TrueType (.ttf), gestione della dimensione del testo e dei margini.
+- **Attachment Embedding**: Attachments (PDFs, images, documents) are not only listed, but physically embedded into the PDF. They can be accessed from the “Attachments” panel of most PDF readers (Adobe Acrobat, Foxit, etc.).
+- **Safe Archiving**: The original `.eml` file is always included as an attachment inside the PDF.
+- **Batch Processing**: Converts hundreds of emails at once by simply providing a source folder.
+- **Custom Output**: Supports TrueType fonts (`.ttf`), text size settings, and margin configuration.
 
-##  Installazione
+## Installation
 
-1. Clona il repository o scarica i file:
+1. Clone the repository (or download the files):
+
    ```bash
    git clone https://github.com/perroneclaudio/eml-to-pdf-converter-embedder.git
    cd eml-to-pdf-converter-embedder
    ```
-2. Installa le dipendenze:
-
+2. Install dependencies
+   
    ```bash
-    pip install -r requirements.txt
-    ```
-##  Utilizzo
-
-Conversione singola (pdf generato nella stessa cartella):
-   ```bash
-  python eml_to_pdf.py messaggio.eml
+   pip install -r requirements.txt
    ```
-Conversione singola con specifica percorso di output:
+## Usage
+Single conversion (PDF generated in the same folder):
+   ```bash
+   python eml_to_pdf.py messaggio.eml
+   ```
+Single conversion (custom output path):
+   ```bash
+   python eml_to_pdf.py messaggio.eml -o /folder/out.pdf
+   ```
+Batch conversion with a custom output folder:
+   ```bash
+   python eml_to_pdf.py ./cartella_eml --batch -o /folder_out
+   ```
+Conversion using a custom font:
+   ```bash
+   python eml_to_pdf.py messaggio.eml --font ./DejaVuSans.ttf
+   ```
+## Available Options:
 
-  ```bash
-  python eml_to_pdf.py messaggio.eml -o /folder/out.pdf
-  ```
-Conversione batch con specifica percorso di output:
-
-  ```bash
-  python eml_to_pdf.py ./cartella_eml --batch -o /folder_out
-  ```
-Conversione con font personalizzato:
-
-  ```bash
-  python eml_to_pdf.py messaggio.eml --font ./DejaVuSans.ttf
-  ```
-## Opzioni disponibili:
-
-  | Opzione            | Descrizione                                                  |
+  | Option             | Description                                                  |
   | ------------------ | ------------------------------------------------------------ |
-  | `-o`, `--output`   | Percorso PDF di output (o cartella output in modalità batch) |
-  | `--batch`          | Elabora tutti i file `.eml` nella cartella indicata          |
-  | `--font`           | Percorso font `.ttf` da usare nel PDF                        |
-  | `--font-size`      | Dimensione testo (default: 10)                               |
-  | `--margins`        | Margini in mm (default: 20)                                  |
+  | `-o`, `--output`   | Output PDF path (or output folder when using batch mode)     |
+  | `--batch`          | Processes all .eml files in the given folder                 |
+  | `--font`           | Path to a .ttf font to use in the generated PDF              |
+  | `--font-size`      | Text size (default: 10)                                      |
+  | `--margins`        | Margins in mm (default: 20)                                  |
+
+## AI Disclosure
+
+This project was developed with the support of AI tools (Gemini 3-Pro). The final code was reviewed and tested by the author (not NASA-level testing, though).
 
 
