@@ -31,6 +31,8 @@ Single conversion (PDF generated in the same folder):
 Single conversion (custom output path):
    ```bash
    python eml_to_pdf.py messaggio.eml -o /folder/out.pdf
+
+   # Windows (Use backslashes and quotes for paths with spaces)
    ```
 Batch conversion with a custom output folder:
    ```bash
