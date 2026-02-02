@@ -182,7 +182,7 @@ def finalize_pdf_with_attachments(pdf_in: Path, pdf_out: Path, files_to_attach: 
         pdf.Root["/AF"] = pikepdf.Array(embedded_files)
         pdf.save(pdf_out)
 
-def process_single_eml(eml_path: Path, out_pdf: Path, font_p: Path, font_size: int, margins: int, include_inline: bool):
+def process_single_eml(eml_path: Path, out_pdf: Path, font_p: Path, font_size: int, margins: int, include_inline: bool, embed_eml: bool):
     """Esegue l'intero processo di conversione per un singolo file .eml."""
     with tempfile.TemporaryDirectory(prefix="eml_conv_") as tmp_dir_name:
         tmpdir = Path(tmp_dir_name)
@@ -192,10 +192,14 @@ def process_single_eml(eml_path: Path, out_pdf: Path, font_p: Path, font_size: i
         
         attachments = extract_attachments(msg, tmpdir / "files", include_inline)
         
-        # Aggiungiamo sempre l'EML originale come allegato "ancora"
-        eml_copy = tmpdir / sanitize_filename(eml_path.name, "original.eml")
-        shutil.copy2(eml_path, eml_copy)
-        all_to_embed = [eml_copy] + attachments
+        all_to_embed = []
+        if embed_eml:
+            # Aggiungiamo l'EML originale come allegato solo se richiesto
+            eml_copy = tmpdir / sanitize_filename(eml_path.name, "original.eml")
+            shutil.copy2(eml_path, eml_copy)
+            all_to_embed.append(eml_copy)
+            
+        all_to_embed.extend(attachments)
         
         intermediate_pdf = tmpdir / "temp.pdf"
         create_pdf_from_email(intermediate_pdf, headers, body, all_to_embed, font_p, font_size, margins)
@@ -205,6 +209,7 @@ def main():
     ap = argparse.ArgumentParser(description="Convertitore EML to PDF professionale.")
     ap.add_argument("input_path", help="Percorso file .eml o cartella")
     ap.add_argument("-o", "--output", help="Percorso PDF o cartella di destinazione")
+    ap.add_argument("--no-embed-eml", action="store_true", help="Non incorporare il file .eml originale nel PDF")
     ap.add_argument("--font", help="Percorso font .ttf")
     ap.add_argument("--font-size", type=int, default=10)
     ap.add_argument("--margins", type=int, default=20)
@@ -231,7 +236,7 @@ def main():
             target = od / (f.stem + ".pdf")
             print(f"In corso: {f.name}...", end=" ", flush=True)
             try:
-                process_single_eml(f, target, fp, args.font_size, args.margins, args.include_inline)
+                process_single_eml(f, target, fp, args.font_size, args.margins, args.include_inline, not args.no_embed_eml)
                 print("OK")
             except Exception as e:
                 print(f"ERRORE: {e}")
@@ -241,7 +246,7 @@ def main():
             return
         op = Path(args.output).resolve() if args.output else ip.with_suffix(".pdf")
         print(f"Conversione {ip.name}...", end=" ", flush=True)
-        process_single_eml(ip, op, fp, args.font_size, args.margins, args.include_inline)
+        process_single_eml(ip, op, fp, args.font_size, args.margins, args.include_inline, not args.no_embed_eml)
         print("OK")
 
 if __name__ == "__main__":
