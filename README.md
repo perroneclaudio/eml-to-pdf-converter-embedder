@@ -5,7 +5,7 @@ A Python tool to convert `.eml` files into readable PDF documents, designed to p
 ## Key Features
 
 - **Attachment Embedding**: Attachments (PDFs, images, documents) are not only listed, but physically embedded into the PDF. They can be accessed from the “Attachments” panel of most PDF readers (Adobe Acrobat, Foxit, etc.).
-- **Archiving**: The original `.eml` file is always included as an attachment inside the PDF.
+- **Archiving**: The original .eml file is included as an attachment (can be disabled with ```--no-embed-eml```)..
 - **Batch Processing**: Converts hundreds of emails at once by simply providing a source folder.
 - **Custom Output**: Supports TrueType fonts (`.ttf`), text size settings, and margin configuration.
 
@@ -15,33 +15,39 @@ A Python tool to convert `.eml` files into readable PDF documents, designed to p
 
    ```bash
    git clone https://github.com/perroneclaudio/eml-to-pdf-converter-embedder.git
-   
    cd eml-to-pdf-converter-embedder
    ```
-2. Install dependencies (Python 3.10+ required)
+2. Create virtual environment (if needed) and activate (Python 3.10+ required):
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+   
+3. Install dependencies:
    
    ```bash
    pip install -r requirements.txt
    ```
+
 ## Usage
 Single conversion (PDF generated in the same folder):
    ```bash
-   python eml_to_pdf.py messaggio.eml
+   python3 eml_to_pdf.py messaggio.eml
    ```
 Single conversion (custom output path):
    ```bash
-   python eml_to_pdf.py messaggio.eml -o /folder/out.pdf
+   python3 eml_to_pdf.py messaggio.eml -o /folder/out.pdf
    # Windows: Use backslashes and quotes for paths with spaces
    ```
 Batch conversion with a custom output folder:
    ```bash
-   python eml_to_pdf.py ./cartella_eml --batch -o /folder_out
+   python3 eml_to_pdf.py ./cartella_eml --batch -o /folder_out
    # Windows: Use backslashes and quotes for paths with spaces
 
    ```
 Conversion using a custom font:
    ```bash
-   python eml_to_pdf.py messaggio.eml --font ./DejaVuSans.ttf
+   python3 eml_to_pdf.py messaggio.eml --font ./DejaVuSans.ttf
    # Windows: Use backslashes and quotes for paths with spaces
 
    ```
