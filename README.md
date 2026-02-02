@@ -54,6 +54,7 @@ Conversion using a custom font:
   | `--font`           | Path to a .ttf font to use in the generated PDF              |
   | `--font-size`      | Text size (default: 10)                                      |
   | `--margins`        | Margins in mm (default: 20)                                  |
+  | `--no-embed-eml`   | Skip original .eml embedding                                 |
 
 ## Roadmap
 
