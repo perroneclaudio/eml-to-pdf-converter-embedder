@@ -19,7 +19,7 @@ A Python tool to convert `.eml` files into readable PDF documents, designed to p
    ```
 2. Create virtual environment (if needed) and activate (Python 3.10+ required):
    ```bash
-   python3 -m venv venv
+   python -m venv venv
    source venv/bin/activate
    ```
    
@@ -32,22 +32,22 @@ A Python tool to convert `.eml` files into readable PDF documents, designed to p
 ## Usage
 Single conversion (PDF generated in the same folder):
    ```bash
-   python3 eml_to_pdf.py messaggio.eml
+   python eml_to_pdf.py messaggio.eml
    ```
 Single conversion (custom output path):
    ```bash
-   python3 eml_to_pdf.py messaggio.eml -o /folder/out.pdf
+   python eml_to_pdf.py messaggio.eml -o /folder/out.pdf
    # Windows: Use backslashes and quotes for paths with spaces
    ```
 Batch conversion with a custom output folder:
    ```bash
-   python3 eml_to_pdf.py ./cartella_eml --batch -o /folder_out
+   python eml_to_pdf.py ./cartella_eml --batch -o /folder_out
    # Windows: Use backslashes and quotes for paths with spaces
 
    ```
 Conversion using a custom font:
    ```bash
-   python3 eml_to_pdf.py messaggio.eml --font ./DejaVuSans.ttf
+   python eml_to_pdf.py messaggio.eml --font ./DejaVuSans.ttf
    # Windows: Use backslashes and quotes for paths with spaces
 
    ```
