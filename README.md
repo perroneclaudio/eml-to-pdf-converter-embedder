@@ -30,7 +30,8 @@ A Python tool to convert .EML and .MSG files into readable PDF documents, design
    pip install -r requirements.txt
    ```
 
-> ## To generate a fully compliant PDF/A-3b file, you MUST provide a regular font, a bold font, and an ICC profile via the command-line options. Sample files can be found in the assets folder. You MUST use an ICC profile with Device Class Monitor (mntr) or Printer (prtr).
+> [!IMPORTANT]
+To generate a fully compliant PDF/A-3b file, you MUST provide a regular font, a bold font, and an ICC profile via the command-line options. Sample files can be found in the assets folder. You MUST use an ICC profile with Device Class Monitor (mntr) or Printer (prtr).
 
 ## Usage
 
