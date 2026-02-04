@@ -5,7 +5,8 @@ A Python tool to convert `.eml` files into readable PDF documents, designed to p
 ## Key Features
 
 - **Attachment Embedding**: Attachments (PDFs, images, documents) are not only listed, but physically embedded into the PDF. They can be accessed from the “Attachments” panel of most PDF readers (Adobe Acrobat, Foxit, etc.).
-- **Archiving**: The original .eml file is included as an attachment (can be excluded with ```--no-embed-eml```).
+- **PDF/A-3b Compliance & Legal Archiving**: Generates ISO 19005-3 compliant documents suitable for long-term preservation. Enforces strict XMP metadata, timezone integrity, and ICC color profiles to ensure validation with tools like veraPDF.
+- **Source Archiving**: The original .eml/.msg file is included as an attachment (can be excluded with `--no-embed-orig`).
 - **Batch Processing**: Converts hundreds of emails at once by simply providing a source folder.
 - **Custom Output**: Supports TrueType fonts (`.ttf`) embedding, text size settings, and margin configuration.
 
@@ -62,9 +63,6 @@ Conversion using a custom font:
   | `--margins`        | Margins in mm (default: 20)                                  |
   | `--no-embed-eml`   | Skip original .eml embedding                                 |
 
-## Roadmap
-
-Next goal: Full PDF/A-3b compliance
 
 ## AI Disclosure
 
