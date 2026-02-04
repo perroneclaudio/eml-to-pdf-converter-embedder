@@ -3,8 +3,6 @@
 
 """
 eml-to-pdf-converter-embedder (Strict PDF/A-3b Compliant)
-Target: Legal Archiving & Long-term Preservation
-Features: Robust Parsing, Secure Embedding, Strict Metadata, No Warnings
 Copyright (c) 2026 Claudio Perrone
 Licensed under the MIT License.
 """
@@ -34,7 +32,7 @@ try:
 except ImportError:
     sys.exit("ERRORE CRITICO: Libreria 'beautifulsoup4' non trovata. Installa con: pip install beautifulsoup4")
 
-# Gestione opzionale MSG
+# Gestione opzionale MSG vecchio outlook
 try:
     import extract_msg
 except ImportError:
@@ -292,7 +290,7 @@ def finalize_pdf_with_attachments(pdf_in: Path, pdf_out: Path, files_to_attach: 
             
             ef_stream = pdf.make_stream(file_data)
             ef_stream.Type = pikepdf.Name("/EmbeddedFile")
-            ef_stream.Subtype = pikepdf.Name("/" + mime_type.replace("/", "#2f"))
+            ef_stream.Subtype = pikepdf.Name("/" + mime_type)
             ef_stream.Params = pikepdf.Dictionary({
                 "/Size": len(file_data),
                 "/ModDate": pikepdf.String(pdf_date_str),
