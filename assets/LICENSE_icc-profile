@@ -1,1 +1,9 @@
-The included ICC profile (sRGB_v4_ICC_preference.icc) is provided by the International Color Consortium and is distributed under the ICC License.
+The sRGB_IEC61966-2-1_no_black_scaling.icc profile is provided by the International Color Consortium (ICC).
+
+Copyright (c) International Color Consortium, 2003-2026.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this Reference Color Profile (the "Reference Color Profile"), to deal in the Reference Color Profile without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Reference Color Profile, and to permit persons to whom the Reference Color Profile is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Reference Color Profile.
+
+THE REFERENCE COLOR PROFILE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
