@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-eml-to-pdf-converter-embedder (Strict PDF/A-3b Compliant)
+eml(and msg)-to-pdf-converter-embedder (Strict PDF/A-3b Compliant)
 Copyright (c) 2026 Claudio Perrone
 Licensed under the MIT License.
 """
@@ -482,3 +482,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
