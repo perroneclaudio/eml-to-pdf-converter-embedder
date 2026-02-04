@@ -1,7 +1,7 @@
 # EML(and MSG)-to-pdf-converter-embedder 📧➔(📄📎)
 
 A Python tool to convert .EML and .MSG files into readable PDF documents, designed to preserve the integrity of the original email by embedding all attachments and the source file directly inside the PDF.
-Fully PDF/A-3b compliant
+Fully **PDF/A-3b compliant**
 
 ## Key Features
 
