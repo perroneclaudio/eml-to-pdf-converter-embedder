@@ -442,7 +442,6 @@ def main():
     ap.add_argument("--batch", action="store_true", help="Elabora cartella intera")
     ap.add_argument("--no-embed-orig", action="store_true", help="Escludi file sorgente dall'embedding")
     ap.add_argument("--exclude-inline", action="store_true", help="Escludi oggetti inline come allegati")
-    ap.add_argument("--validate", action="store_true", help="Ignorato (per compatibilità)")
     
     args = ap.parse_args()
     ip = Path(args.input_path).resolve()
@@ -482,4 +481,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
