@@ -37,16 +37,16 @@ To generate a fully compliant PDF/A-3b file, you MUST provide a regular font, a 
 
 Single conversion (PDF generated in the same folder):
    ```bash
-   python eml_to_pdf.py messaggio.eml --icc "./assets/srgb.icc" --font "./assets/DejaVuSans.ttf" --font-bold "./assets/DejaVuSans-Bold.ttf"
+   python eml_to_pdf_converter.py messaggio.eml --icc "./assets/srgb.icc" --font "./assets/DejaVuSans.ttf" --font-bold "./assets/DejaVuSans-Bold.ttf"
    ```
 Single conversion (custom output path):
    ```bash
-   python eml_to_pdf.py messaggio.eml -o /folder/out.pdf --icc "./assets/srgb.icc" --font "./assets/DejaVuSans.ttf" --font-bold "./assets/DejaVuSans-Bold.ttf"
+   python eml_to_pdf_converter.py messaggio.eml -o /folder/out.pdf --icc "./assets/srgb.icc" --font "./assets/DejaVuSans.ttf" --font-bold "./assets/DejaVuSans-Bold.ttf"
    # Windows: Use backslashes and quotes for paths with spaces
    ```
 Batch conversion with a custom output folder:
    ```bash
-   python eml_to_pdf.py ./cartella_eml --batch -o /folder_out --icc "./assets/srgb.icc" --font "./assets/DejaVuSans.ttf" --font-bold "./assets/DejaVuSans-Bold.ttf"
+   python eml_to_pdf_converter.py ./cartella_eml --batch -o /folder_out --icc "./assets/srgb.icc" --font "./assets/DejaVuSans.ttf" --font-bold "./assets/DejaVuSans-Bold.ttf"
    # Windows: Use backslashes and quotes for paths with spaces
 
  
