@@ -5,7 +5,7 @@ A Python tool to convert .EML and .MSG files into readable PDF documents, design
 ## Key Features
 
 - **Attachment Embedding**: Attachments (PDFs, images, documents) are not only listed, but physically embedded into the PDF. They can be accessed from the “Attachments” panel of most PDF readers (Adobe Acrobat, Foxit, etc.).
-- **PDF/A-3b Compliance & Legal Archiving**: Generates ISO 19005-3 compliant documents suitable for long-term preservation. Enforces strict XMP metadata, timezone integrity, and ICC color profiles to ensure validation with tools like **veraPDF**, the **industry standard** for **PDF/A** validation.
+- **PDF/A-3b Compliance & Legal Archiving**: Generates **ISO 19005-3** compliant documents suitable for long-term preservation. Enforces strict XMP metadata, timezone integrity, and ICC color profiles to ensure validation with tools like **veraPDF**, the **industry standard** for **PDF/A** validation.
 - **Source Archiving**: The original .eml/.msg file is included as an attachment (can be excluded with `--no-embed-orig`).
 - **Batch Processing**: Converts hundreds of emails at once by simply providing a source folder.
 - **Custom Output**: Supports TrueType fonts (`.ttf`) embedding, text size settings, and margin configuration.
@@ -31,7 +31,7 @@ A Python tool to convert .EML and .MSG files into readable PDF documents, design
    ```
 
 > [!IMPORTANT]
-To generate a fully compliant PDF/A-3b file, you MUST provide a regular font, a bold font, and an ICC profile via the command-line options. Sample files can be found in the assets folder. You MUST use an ICC profile with Device Class Monitor (mntr) or Printer (prtr).
+To generate a fully compliant PDF/A-3b file, you MUST provide a regular font, a bold font, and an ICC color profile via the command-line options. Sample files can be found in the assets folder. You MUST use an ICC profile with Device Class Monitor (mntr) or Printer (prtr).
 
 ## Usage
 
