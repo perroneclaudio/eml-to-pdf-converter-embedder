@@ -43,12 +43,10 @@ Single conversion (PDF generated in the same folder):
 Single conversion (custom output path):
    ```bash
    python eml_to_pdf_converter.py messaggio.eml -o /folder/out.pdf --icc "./assets/srgb.icc" --font "./assets/DejaVuSans.ttf" --font-bold "./assets/DejaVuSans-Bold.ttf"
-   # Windows: Use backslashes and quotes for paths with spaces
    ```
 Batch conversion with a custom output folder:
    ```bash
    python eml_to_pdf_converter.py ./cartella_eml --batch -o /folder_out --icc "./assets/srgb.icc" --font "./assets/DejaVuSans.ttf" --font-bold "./assets/DejaVuSans-Bold.ttf"
-   # Windows: Use backslashes and quotes for paths with spaces
 ```
  
 ## Available Options:
